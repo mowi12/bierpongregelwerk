@@ -7,23 +7,27 @@
 \usepackage{microtype} %typografische Verbesserungen
 \usepackage[colorlinks=false,pdfborder={0 0 0},bookmarksnumbered]{hyperref}
 \usepackage{enumitem}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{tabularx}
 
 \newcommand{\enum}[1]{\begin{enumerate}[label=(\arabic*)]#1\end{enumerate}}
 \newcommand{\art}[2]{\subsection*{#1} \enum{#2}}
 \newcommand{\quot}[1]{\glqq #1\grqq}
+
+\newcommand{\new}[1]{\textcolor{red}{#1}}
 
 \newcounter{art}
 \setcounter{art}{1}
 
 \title{\Huge{Bierpongregelwerk}}
 \author{Millane Meyer, Markus Schuster, Moritz Gehring \\Leonard Alkewitz, Mukhtar Muse, Moritz Wieland}
-\date{\small{10.02.2023}}
+\date{\small{11.02.2023}}
 
 \begin{document}
 
 \maketitle
 \vspace*{-1cm}
-\center{\small{Version 1.0.1}}
+\center{\small{Version 1.1.0}}
 \newpage
 
 \section{Allgemeines}
@@ -51,6 +55,12 @@
         Bei Specialwürfen, bei denen mehr als nur der getroffene Becher entfernt wird, werden zuerst angrenzende Becher entfernt. Erst danach dürfen Becher entfernt werden, die nicht direkt and den Specialbecher angrenzen.
     \item
         Die Becher, die zusätzlich entfernt werden müssen, dürfen vom Team ausgesucht werden, denen die Becher gehören.
+}
+\stepcounter{art}
+
+\art{Art \theart}{
+    \item
+        \new{Es dürfen beide Bälle gleichzeitig geworfen werden.}
 }
 \stepcounter{art}
 
@@ -95,6 +105,8 @@
 \art{Art \theart}{
     \item
         Das Spiel ist vorbei sobald ein Team keine Becher mehr hat.
+    \item
+        \new{Wird eine Partie mit einem Timer gespielt, so ist das Spiel auch vorbei, sobald der Timer abgelaufen ist. Befindet sich das Spiel zu diesem Zeitpunkt im Gleichstand, so gewinnt das Team, welches den nächsten gegnerischen Becher trifft. Es gibt keinen Konter.}
 }
 \stepcounter{art}
 
@@ -105,6 +117,8 @@
         Ein Konterversuch ist erfolgreich wenn das Zweite Team mit der gleichen Anzahl an Würfen die gleiche Anzahl an Bechern trifft wie das Erste Team zum Ausmachen benötigt hat.
     \item
         Ist der letzte Wurf vom Ersten Team ein Specialwurf, so muss das Zweite Team mit dem gleichen Specialwurf kontern.
+    \item
+        \new{Es gibt keine Begrenzung, wie oft gekontert werden kann.}
 }
 \stepcounter{art}
 
@@ -194,11 +208,13 @@
     \item
         Trifft ein Spieler zwei Bälle in Folge darf er \quot{Heating Up} rufen. Trifft der gleiche Spieler einen weiteren dritten Becher in Folge ist er \quot{On Fire} sobald er \quot{On Fire} ruft. Er darf so lange werfen, bis er nicht mehr trifft.
     \item
-        \quot{Heating Up} und \quot{On Fire} müssen in der gleichen Wurfrunde gerufen werden.
+        \quot{Heating Up} und \quot{On Fire} müssen \new{nicht} in der gleichen Wurfrunde gerufen werden.
     \item
         Wird nicht \quot{Heating Up} oder \quot{On Fire} gerufen, so kann der Spieler beim nächsten Treffer in Folge \quot{Heating Up}, bzw. \quot{On Fire} rufen.
     \item
         Die \quot{On Fire}-Würfe werden \emph{sofort} nach dem Ausruf ausgeführt.
+    \item
+        \new{Aufsetzer und andere Specialwürfe zählen nur als ein Treffer.}
 }
 \stepcounter{art}
 
@@ -219,5 +235,15 @@
         Bälle die seitlich, neben den Tisch geworfen werden, bzw. dort gefangen werden, zählen nicht als \quot{Air Ball}.
 }
 \stepcounter{art}
+
+\section{\new{Specialwurfkombinationen}}
+    \begin{itemize}
+        \item
+            \new{Bombe mit Aufsetzer $\rightarrow$ Bombenbecher + 2 weitere (Bombe) + 1 Becher je Aufsetzer}
+        \item
+            \new{Island mit Aufsetzer $\rightarrow$ Islandbecher + 1 weiterer (Island) + 1 Becher je Aufsetzer}
+        \item
+            \new{Bombe mit Island $\rightarrow$ Bomben-/ Islandbecher + 2 weitere (Bombe) + 1 weiterer (Island)}
+    \end{itemize}
 
 \end{document}
