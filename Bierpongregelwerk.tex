@@ -10,6 +10,7 @@
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{tabularx}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\enum}[1]{\begin{enumerate}[label=(\arabic*)]#1\end{enumerate}}
 \newcommand{\art}[2]{\subsection*{#1} \enum{#2}}
 \newcommand{\quot}[1]{\glqq #1\grqq}
@@ -19,231 +20,282 @@
 \newcounter{art}
 \setcounter{art}{1}
 
+\newcommand{\entry}[4]{#1 & #2 & #3 & #4\\}
+\newcommand{\event}[4]{\item #1:\\1. #2\\2. #3\\3. #4}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \title{\Huge{Bierpongregelwerk}}
 \author{Millane Meyer, Markus Schuster, Moritz Gehring \\Leonard Alkewitz, Mukhtar Muse, Moritz Wieland}
-\date{\small{11.02.2023}}
+\date{\small{18.02.2023}}
 
 \begin{document}
 
 \maketitle
 \vspace*{-1cm}
-\center{\small{Version 1.1.0}}
+\center{\small{Version 1.2.0}}
 \newpage
 
 \section{Allgemeines}
+    \art{Art \theart}{
+        \item
+            Wird ein Becher getroffen, so muss \emph{jedes} Teammitglied, die vor Spielbeginn vereinbarte Menge, trinken.
+    }
+    \stepcounter{art}
 
-\art{Art \theart}{
-    \item
-        Wird ein Becher getroffen, so muss \emph{jedes} Teammitglied, die vor Spielbeginn vereinbarte Menge, trinken.
-}
-\stepcounter{art}
+    \art{Art \theart}{
+        \item
+            Es muss erst getrunken werden, wenn alle Würfe des gegnerischen Teams getätigt wurden.
+        \item
+            Vergisst ein Teammitglied bis zur nächsten Runde zu trinken, so darf sich das gegnerische Team eine angemessene Strafe für das \emph{ganze} Team ausdenken. Empfohlen wird eine Shotrunde.
+        \item
+            Befindet sich das Spiel am Ende und es handelt sich um einen Konterwurf, so muss erst getrunken werden, wenn der Konterwurf nicht getroffen wurde.
+    }
+    \stepcounter{art}
 
-\art{Art \theart}{
-    \item
-        Es muss erst getrunken werden, wenn alle Würfe des gegnerischen Teams getätigt wurden.
-    \item
-        Vergisst ein Teammitglied bis zur nächsten Runde zu trinken, so darf sich das gegnerische Team eine angemessene Strafe für das \emph{ganze} Team ausdenken. Empfohlen wird eine Shotrunde.
-    \item
-        Befindet sich das Spiel am Ende und es handelt sich um einen Konterwurf, so muss erst getrunken werden, wenn der Konterwurf nicht getroffen wurde.
-}
-\stepcounter{art}
+    \art{Art \theart}{
+        \item
+            Bei jedem Specialwurf wird \emph{immer} der Specialbecher entfernt.
+        \item
+            Bei Specialwürfen, bei denen mehr als nur der getroffene Becher entfernt wird, werden zuerst angrenzende Becher entfernt. Erst danach dürfen Becher entfernt werden, die nicht direkt and den Specialbecher angrenzen.
+        \item
+            Die Becher, die zusätzlich entfernt werden müssen, dürfen vom Team ausgesucht werden, denen die Becher gehören.
+    }
+    \stepcounter{art}
 
-\art{Art \theart}{
-    \item
-        Bei jedem Specialwurf wird \emph{immer} der Specialbecher entfernt.
-    \item
-        Bei Specialwürfen, bei denen mehr als nur der getroffene Becher entfernt wird, werden zuerst angrenzende Becher entfernt. Erst danach dürfen Becher entfernt werden, die nicht direkt and den Specialbecher angrenzen.
-    \item
-        Die Becher, die zusätzlich entfernt werden müssen, dürfen vom Team ausgesucht werden, denen die Becher gehören.
-}
-\stepcounter{art}
+    \art{Art \theart}{
+        \item
+            Es dürfen beide Bälle gleichzeitig geworfen werden.
+    }
+    \stepcounter{art}
 
-\art{Art \theart}{
-    \item
-        \new{Es dürfen beide Bälle gleichzeitig geworfen werden.}
-}
-\stepcounter{art}
+    \art{Art \theart}{
+        \item
+            Ein Spieler darf das andere Team Auffordern die Becher zu richten. Das gegnerische Team muss dieser Aufforderung nachkommen und die Becher richten.
+        \item
+            Das gegnerische Team darf die Becher nicht ohne Erlaubnis des anderen Teams richten.
+    }
+    \stepcounter{art}
 
-\art{Art \theart}{
-    \item
-        Ein Spieler darf das andere Team Auffordern die Becher zu richten. Das gegnerische Team muss dieser Aufforderung nachkommen und die Becher richten.
-    \item
-        Das gegnerische Team darf die Becher nicht ohne Erlaubnis des anderen Teams richten.
-}
-\stepcounter{art}
+    \art{Art \theart}{
+        \item
+            Ein Spieler darf das andere Team Auffordern den Ball, wenn er sich in einem Becher befindet, zu entfernen. Das gegnerische Team darf dies auch ohne Aufforderung tun.
+    }
+    \stepcounter{art}
 
-\art{Art \theart}{
-    \item
-        Ein Spieler darf das andere Team Auffordern den Ball, wenn er sich in einem Becher befindet, zu entfernen. Das gegnerische Team darf dies auch ohne Aufforderung tun.
-}
-\stepcounter{art}
-
-\art{Art \theart}{
-    \item
-        Während das gegnerische Team am Trinken der vereinbarten Menge ist darf nicht geworfen werden.
-    \item
-        Trinkt das generische Team obwohl es nicht trinken muss, oder lenkt sich selbst durch andere Aktivitäten selbst ab, darf geworfen werden.
-}
-\stepcounter{art}
+    \art{Art \theart}{
+        \item
+            Während das gegnerische Team am Trinken der vereinbarten Menge ist darf nicht geworfen werden.
+        \item
+            Trinkt das generische Team obwohl es nicht trinken muss, oder lenkt sich selbst durch andere Aktivitäten selbst ab, darf geworfen werden.
+    }
+    \stepcounter{art}
 
 \section{Spielbeginn}
-
-\art{Art \theart}{
-    \item
-        Wurf um Spielreihenfolge und -Seite: Je ein Spieler pro Seite erhält einen Ball. Beide Spieler müssen nun gleichzeitig versuchen einen gegnerischen Becher zu treffen.
-    \item
-        Zum Zeitpunkt des Werfens müssen sich beide Spieler in die Augen schauen.
-    \item
-        Das Team des Spielers, der zuerst getroffen hat, darf entscheiden welches Team anfängt. Das Team des Spielers, das nicht getroffen hat, darf entscheiden welches Team auf welcher Tischseite spielt.
-    \item
-        Treffen beide Spieler, so muss der Wurf von den gleichen Spielern wiederholt werden.
-}
-\stepcounter{art}
+    \art{Art \theart}{
+        \item
+            Wurf um Spielreihenfolge und -Seite: Je ein Spieler pro Seite erhält einen Ball. Beide Spieler müssen nun gleichzeitig versuchen einen gegnerischen Becher zu treffen.
+        \item
+            Zum Zeitpunkt des Werfens müssen sich beide Spieler in die Augen schauen.
+        \item
+            Das Team des Spielers, der zuerst getroffen hat, darf entscheiden welches Team anfängt. Das Team des Spielers, das nicht getroffen hat, darf entscheiden welches Team auf welcher Tischseite spielt.
+        \item
+            Treffen beide Spieler, so muss der Wurf von den gleichen Spielern wiederholt werden.
+    }
+    \stepcounter{art}
 
 \section{Spielende}
+    \art{Art \theart}{
+        \item
+            Das Spiel ist vorbei sobald ein Team keine Becher mehr hat.
+        \item
+             eine Partie mit einem Timer gespielt, so ist das Spiel auch vorbei, sobald der Timer abgelaufen ist. Befindet sich das Spiel zu diesem Zeitpunkt im Gleichstand, so gewinnt das Team, welches den nächsten gegnerischen Becher trifft. Es gibt keinen Konter.
+    }
+    \stepcounter{art}
 
-\art{Art \theart}{
-    \item
-        Das Spiel ist vorbei sobald ein Team keine Becher mehr hat.
-    \item
-        \new{Wird eine Partie mit einem Timer gespielt, so ist das Spiel auch vorbei, sobald der Timer abgelaufen ist. Befindet sich das Spiel zu diesem Zeitpunkt im Gleichstand, so gewinnt das Team, welches den nächsten gegnerischen Becher trifft. Es gibt keinen Konter.}
-}
-\stepcounter{art}
-
-\art{Art \theart}{
-    \item
-        Wenn das Erste Team den letzten Becher vom Zweite Team trifft hat das Zweite Team einen Konverversuch. Ist der Konterversuch erfolgreich werden keine Becher entfernt und das Erste Team ist an der Reihe.
-    \item
-        Ein Konterversuch ist erfolgreich wenn das Zweite Team mit der gleichen Anzahl an Würfen die gleiche Anzahl an Bechern trifft wie das Erste Team zum Ausmachen benötigt hat.
-    \item
-        Ist der letzte Wurf vom Ersten Team ein Specialwurf, so muss das Zweite Team mit dem gleichen Specialwurf kontern.
-    \item
-        \new{Es gibt keine Begrenzung, wie oft gekontert werden kann.}
-}
-\stepcounter{art}
+    \art{Art \theart}{
+        \item
+            Wenn das Erste Team den letzten Becher vom Zweite Team trifft hat das Zweite Team einen Konverversuch. Ist der Konterversuch erfolgreich werden keine Becher entfernt und das Erste Team ist an der Reihe.
+        \item
+            Ein Konterversuch ist erfolgreich wenn das Zweite Team mit der gleichen Anzahl an Würfen die gleiche Anzahl an Bechern trifft wie das Erste Team zum Ausmachen benötigt hat.
+        \item
+            Ist der letzte Wurf vom Ersten Team ein Specialwurf, so muss das Zweite Team mit dem gleichen Specialwurf kontern.
+        \item
+            Es gibt keine Begrenzung, wie oft gekontert werden kann.
+    }
+    \stepcounter{art}
 
 \section{Spielregeln}
+    \art{Art \theart}{
+        \item
+            Jedes Team hat pro Wurfrunde zwei Standardwürfe.
+        \item
+            Durch Specialwürfe kann die anzahl an Würfen pro Wurfrunde erhöht werden.
+        \item
+            Besteht ein Team aus mehr als einem Spieler, so müssen immer zwei verschiedene Spieler werfen. Sind drei oder mehr Spieler in einem Team, so muss jede Wurfrunde ein anderes Paar an Spielern werfen.
+    }
+    \stepcounter{art}
 
-\art{Art \theart}{
-    \item
-        Jedes Team hat pro Wurfrunde zwei Standardwürfe.
-    \item
-        Durch Specialwürfe kann die anzahl an Würfen pro Wurfrunde erhöht werden.
-    \item
-        Besteht ein Team aus mehr als einem Spieler, so müssen immer zwei verschiedene Spieler werfen. Sind drei oder mehr Spieler in einem Team, so muss jede Wurfrunde ein anderes Paar an Spielern werfen.
-}
-\stepcounter{art}
+    \art{Art \theart\ - Ellenbogen}{
+        \item
+            Der Ellenbogen muss beim Wurf hinter der Tischkante bleiben.
+        \item
+            Millane-Technik: Steht eine Person seitlich vom Tisch, so muss der Ellenbogen ebenfalls hinter der verlängerten Tischkante bleiben.
+        \item
+            Die Millane-Technik darf nur angewendet werden, wenn dadurch kein anderer Spieler behindert wird.
+    }
+    \stepcounter{art}
 
-\art{Art \theart\ - Ellenbogen}{
-    \item
-        Der Ellenbogen muss beim Wurf hinter der Tischkante bleiben.
-    \item
-        Millane-Technik: Steht eine Person seitlich vom Tisch, so muss der Ellenbogen ebenfalls hinter der verlängerten Tischkante bleiben.
-    \item
-        Die Millane-Technik darf nur angewendet werden, wenn dadurch kein anderer Spieler behindert wird.
-}
-\stepcounter{art}
+    \art{Art \theart\ - \quot{Balls Back}}{
+        \item
+            Werden in einer Wurfrunde beide Würfe getroffen, so werden die Bälle an das aktuelle Werferteam zurückgegeben und das Team darf erneut werfen.
+        \item
+            Bevor erneut geworfen wird, müssen die beiden getroffenen Becher entfernt werden.
+    }
+    \stepcounter{art}
 
-\art{Art \theart\ - \quot{Balls Back}}{
-    \item
-        Werden in einer Wurfrunde beide Würfe getroffen, so werden die Bälle an das aktuelle Werferteam zurückgegeben und das Team darf erneut werfen.
-    \item
-        Bevor erneut geworfen wird, müssen die beiden getroffenen Becher entfernt werden.
-}
-\stepcounter{art}
+    \art{Art \theart\ - Aufsetzer}{
+        \item
+            Wird ein Becher mit einem Ball getroffen, der mindestens einen Aufsetzer gemacht hat, so zählt dieser Treffer als zwei Treffer.
+        \item
+            Sobald ein Ball mindestens einmal aufgesetzt ist, darf dieser abgewehrt werden.
+    }
+    \stepcounter{art}
 
-\art{Art \theart\ - Aufsetzer}{
-    \item
-        Wird ein Becher mit einem Ball getroffen, der mindestens einen Aufsetzer gemacht hat, so zählt dieser Treffer als zwei Treffer.
-    \item
-        Sobald ein Ball mindestens einmal aufgesetzt ist, darf dieser abgewehrt werden.
-}
-\stepcounter{art}
+    \art{Art \theart}{
+        \item
+            Schmeißt ein Teammitglied, während des Spiels, einen oder mehrere Becher des eigenen Teams um, so muss ein Becher entfernt werden.
+        \item
+            Der letzte Becher darf nicht durch umschmeißen entfernt werden.
+    }
+    \stepcounter{art}
 
-\art{Art \theart}{
-    \item
-        Schmeißt ein Teammitglied, während des Spiels, einen oder mehrere Becher des eigenen Teams um, so muss ein Becher entfernt werden.
-    \item
-        Der letzte Becher darf nicht durch umschmeißen entfernt werden.
-}
-\stepcounter{art}
+    \art{Art \theart\ - \quot{Blasen/Fingern}}{
+        \item
+            Es ist nicht erlaubt einen Ball, welcher noch nicht komplett im Becher ist, mit \quot{Blasen} oder \quot{Fingern} zu retten.
+    }
+    \stepcounter{art}
 
-\art{Art \theart\ - \quot{Blasen/Fingern}}{
-    \item
-        Es ist nicht erlaubt einen Ball, welcher noch nicht komplett im Becher ist, mit \quot{Blasen} oder \quot{Fingern} zu retten.
-}
-\stepcounter{art}
+    \art{Art \theart\ - \quot{Dead Cup}}{
+        \item
+            Bleibt ein getroffener Becher am Ende einer Runde stehen, so zählt dieser Becher als \quot{Dead Cup}. Wird dieser Becher von einem gegnerischen Team in einer der nachfolgenden Runden getroffen, so hat das Team, das diesen Becher getroffen hat \emph{sofort} gewonnen.
+        \item
+            Bemerkt ein Mitglied des Teams mit dem \quot{Dead Cup}, dass sie einen \quot{Dead Cup} haben, dürfen sie diesen Becher entfernen. Dies darf allerdings nicht innerhalb einer gegnerischen Wurfrunde passieren.
+    }
+    \stepcounter{art}
 
-\art{Art \theart\ - \quot{Dead Cup}}{
-    \item
-        Bleibt ein getroffener Becher am Ende einer Runde stehen, so zählt dieser Becher als \quot{Dead Cup}. Wird dieser Becher von einem gegnerischen Team in einer der nachfolgenden Runden getroffen, so hat das Team, das diesen Becher getroffen hat \emph{sofort} gewonnen.
-    \item
-        Bemerkt ein Mitglied des Teams mit dem \quot{Dead Cup}, dass sie einen \quot{Dead Cup} haben, dürfen sie diesen Becher entfernen. Dies darf allerdings nicht innerhalb einer gegnerischen Wurfrunde passieren.
-}
-\stepcounter{art}
+    \art{Art \theart\ - \quot{Trickshot}}{
+        \item
+            Rollt ein Ball nach eine Wurf auf die eigene Seite des Tisches zurück, also über die Mitte des Tisches, so darf sich dieser Ball vom aktuell werfenden Team geholt werden. Der Spieler, der sich den Ball geholt hat darf einen \quot{Trickshot} machen. Dieser muss nach den regulären Würfen geworfen werden. Zudem werden von regulären Bällen getroffene Becher zuerst entfernt.
+        \item
+            Ein Ball gilt nur als zurückgerollt wenn er auf der eigenen Tischhälfte liegt. Rollt er wieder in die gegnerische Hälfte zurück darf sich der Ball nicht mehr geholt werden.
+        \item
+            Becher die von einem \quot{Trickshot} getroffen wurden, müssen \emph{sofort} entfernt werden.
+        \item
+            Rollt ein \quot{Trickshot}-Ball auf die eigene Tischhälfte zurück, so kann dieser ebenfalls geholt werden und ein weitere \quot{Trickshot} gemacht werden.
+        \item
+            Ein \quot{Trickshot} zählt nicht als \quot{Air Ball}, falls dieser hinter der Tischkante gefangen wird.
+    }
+    \stepcounter{art}
 
-\art{Art \theart\ - \quot{Trickshot}}{
-    \item
-        Rollt ein Ball nach eine Wurf auf die eigene Seite des Tisches zurück, also über die Mitte des Tisches, so darf sich dieser Ball vom aktuell werfenden Team geholt werden. Der Spieler, der sich den Ball geholt hat darf einen \quot{Trickshot} machen. Dieser muss nach den regulären Würfen geworfen werden. Zudem werden von regulären Bällen getroffene Becher zuerst entfernt.
-    \item
-        Ein Ball gilt nur als zurückgerollt wenn er auf der eigenen Tischhälfte liegt. Rollt er wieder in die gegnerische Hälfte zurück darf sich der Ball nicht mehr geholt werden.
-    \item
-        Becher die von einem \quot{Trickshot} getroffen wurden, müssen \emph{sofort} entfernt werden.
-    \item
-        Rollt ein \quot{Trickshot}-Ball auf die eigene Tischhälfte zurück, so kann dieser ebenfalls geholt werden und ein weitere \quot{Trickshot} gemacht werden.
-    \item
-        Ein \quot{Trickshot} zählt nicht als \quot{Air Ball}, falls dieser hinter der Tischkante gefangen wird.
-}
-\stepcounter{art}
+    \art{Art \theart\ - \quot{Bombe}}{
+        \item
+            Treffen beide Würfe eines Teams in einer Wurfrunde den gleichen Becher, müssen dieser Becher und zwei weitere Becher entfernt werden.
+        \item
+            Eine \quot{Bombe} führt sofort zur Ausführung der \quot{Balls Back}-Regel.
+    }
+    \stepcounter{art}
 
-\art{Art \theart\ - \quot{Bombe}}{
-    \item
-        Treffen beide Würfe eines Teams in einer Wurfrunde den gleichen Becher, müssen dieser Becher und zwei weitere Becher entfernt werden.
-    \item
-        Eine \quot{Bombe} führt sofort zur Ausführung der \quot{Balls Back}-Regel.
-}
-\stepcounter{art}
+    \art{Art \theart\ - \quot{On Fire}}{
+        \item
+            Trifft ein Spieler zwei Bälle in Folge darf er \quot{Heating Up} rufen. Trifft der gleiche Spieler einen weiteren dritten Becher in Folge ist er \quot{On Fire} sobald er \quot{On Fire} ruft. Er darf so lange werfen, bis er nicht mehr trifft.
+        \item
+            \quot{Heating Up} und \quot{On Fire} müssen nicht in der gleichen Wurfrunde gerufen werden.
+        \item
+            Wird nicht \quot{Heating Up} oder \quot{On Fire} gerufen, so kann der Spieler beim nächsten Treffer in Folge \quot{Heating Up}, bzw. \quot{On Fire} rufen.
+        \item
+            Die \quot{On Fire}-Würfe werden \emph{sofort} nach dem Ausruf ausgeführt.
+        \item
+            Aufsetzer und andere Specialwürfe zählen nur als ein Treffer.
+    }
+    \stepcounter{art}
 
-\art{Art \theart\ - \quot{On Fire}}{
-    \item
-        Trifft ein Spieler zwei Bälle in Folge darf er \quot{Heating Up} rufen. Trifft der gleiche Spieler einen weiteren dritten Becher in Folge ist er \quot{On Fire} sobald er \quot{On Fire} ruft. Er darf so lange werfen, bis er nicht mehr trifft.
-    \item
-        \quot{Heating Up} und \quot{On Fire} müssen \new{nicht} in der gleichen Wurfrunde gerufen werden.
-    \item
-        Wird nicht \quot{Heating Up} oder \quot{On Fire} gerufen, so kann der Spieler beim nächsten Treffer in Folge \quot{Heating Up}, bzw. \quot{On Fire} rufen.
-    \item
-        Die \quot{On Fire}-Würfe werden \emph{sofort} nach dem Ausruf ausgeführt.
-    \item
-        \new{Aufsetzer und andere Specialwürfe zählen nur als ein Treffer.}
-}
-\stepcounter{art}
+    \art{Art \theart\ - \quot{Island}}{
+        \item
+            Steht ein Becher allein, hat er also keine Nachbarn, so kann ein Spieler \quot{Island} auf diesen Becher rufen. Trifft der Spieler den genannten Becher muss der getroffene und ein weiterer Becher entfernt werden. Trifft der Spieler statt dem \quot{Island}-Becher einen anderen Becher, zählt der Treffer nicht.
+        \item
+            Jeder Spieler darf einmal im ganzen Spiel \quot{Island} rufen.
+    }
+    \stepcounter{art}
 
-\art{Art \theart\ - \quot{Island}}{
-    \item
-        Steht ein Becher allein, hat er also keine Nachbarn, so kann ein Spieler \quot{Island} auf diesen Becher rufen. Trifft der Spieler den genannten Becher muss der getroffene und ein weiterer Becher entfernt werden. Trifft der Spieler statt dem \quot{Island}-Becher einen anderen Becher, zählt der Treffer nicht.
-    \item
-        Jeder Spieler darf einmal im ganzen Spiel \quot{Island} rufen.
-}
-\stepcounter{art}
+    \art{Art \theart\ - \quot{Air Ball}}{
+        \item
+            Wird ein \quot{Air Ball} hinter der Tischkante gefangen, darf der Fänger des Balls (solange er im gegnerischen Team ist) in der nächsten Wurfrunde einen Ball doppelt werfen.
+        \item
+            Ein Ball zählt als \quot{Air Ball} wenn er keinen Gegenstand, etc. berührt und hinter der Tischplatte gefangen wird.
+        \item
+            Bälle die seitlich, neben den Tisch geworfen werden, bzw. dort gefangen werden, zählen nicht als \quot{Air Ball}.
+    }
+    \stepcounter{art}
 
-\art{Art \theart\ - \quot{Air Ball}}{
-    \item
-        Wird ein \quot{Air Ball} hinter der Tischkante gefangen, darf der Fänger des Balls (solange er im gegnerischen Team ist) in der nächsten Wurfrunde einen Ball doppelt werfen.
-    \item
-        Ein Ball zählt als \quot{Air Ball} wenn er keinen Gegenstand, etc. berührt und hinter der Tischplatte gefangen wird.
-    \item
-        Bälle die seitlich, neben den Tisch geworfen werden, bzw. dort gefangen werden, zählen nicht als \quot{Air Ball}.
-}
-\stepcounter{art}
-
-\section{\new{Specialwurfkombinationen}}
+\section{Specialwurfkombinationen}
     \begin{itemize}
         \item
-            \new{Bombe mit Aufsetzer $\rightarrow$ Bombenbecher + 2 weitere (Bombe) + 1 Becher je Aufsetzer}
+            Bombe mit Aufsetzer $\rightarrow$ Bombenbecher + 2 weitere (Bombe) + 1 Becher je Aufsetzer
         \item
-            \new{Island mit Aufsetzer $\rightarrow$ Islandbecher + 1 weiterer (Island) + 1 Becher je Aufsetzer}
+            Island mit Aufsetzer $\rightarrow$ Islandbecher + 1 weiterer (Island) + 1 Becher je Aufsetzer
         \item
-            \new{Bombe mit Island $\rightarrow$ Bomben-/ Islandbecher + 2 weitere (Bombe) + 1 weiterer (Island)}
+            Bombe mit Island $\rightarrow$ Bomben-/ Islandbecher + 2 weitere (Bombe) + 1 weiterer (Island)
     \end{itemize}
 
+\newpage
+
+\section{\new{Ergebnisse und Platzierungen}}
+    \subsection{Bestenliste}
+        \begin{tabularx}{\textwidth}[h]{XXXX}
+            \hline\hline
+            Name & Punkte & Siege & Teilnahmen\\
+            \hline\hline
+            \entry{Tim}{5}{1}{1}
+            \hline
+            \entry{Michael}{5}{1}{1}
+            \hline
+            \entry{Millane}{5}{1}{1}
+            \hline
+            \entry{Sophie}{3}{0}{1}
+            \hline
+            \entry{Moritz W.}{3}{0}{2}
+            \hline
+            \entry{Moritz G.}{3}{0}{1}
+            \hline
+            \entry{Lea}{1}{0}{1}
+            \hline
+            \entry{Mukhtar}{1}{0}{2}
+            \hline
+            \entry{Leonhard}{1}{0}{2}
+            \hline
+            \entry{Markus}{0}{0}{2}
+            \hline
+            \entry{Marcel}{0}{0}{1}
+            \hline
+            \entry{Felix}{0}{0}{1}
+            \hline\hline
+        \end{tabularx}
+
+        \subsubsection{Bewertung (Einzel- und Teamturniere)}
+            1. Platz: 5 Punkte\\
+            2. Platz: 3 Punkte\\
+            3. Platz: 1 Punkt
+
+    \subsection{Turniere}
+
+    \begin{itemize}
+        \event{10.02.23}
+            {Tim \& Michael}
+            {Sophie \& Moritz W.}
+            {Lea \& Mukhtar}
+        \event{28.01.23}
+            {Millane}
+            {Moritz G.}
+            {Leonhard}
+    \end{itemize}
 \end{document}
